@@ -18,17 +18,15 @@ function hideOtherContentOnLoad() {
     });
 }
 
-// Call the hideOtherContentOnLoad function when the script runs
-hideOtherContentOnLoad();
-
 function fadeInOnLoad() {
     const resumeContent = document.getElementById('resume-content');
-    resumeContent.style.display = 'block';
+    resumeContent.style.opacity = '0';
     setTimeout(() => {
         resumeContent.style.opacity = '1';
     }, 100);
 }
 
-// Call the fadeInOnLoad function after the hideOtherContentOnLoad function
-fadeInOnLoad();
-
+window.onload = function () {
+    hideOtherContentOnLoad();
+    fadeInOnLoad();
+};
