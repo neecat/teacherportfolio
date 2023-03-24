@@ -16,24 +16,16 @@ function fadeInOnLoad() {
 }
 
 function handleNavClicks() {
-  const navLinks = document.querySelectorAll("#nav-bar li a");
-  const contentSections = document.querySelectorAll(".content");
+  $('#nav-bar a').on('click', function (event) {
+    event.preventDefault();
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetId = this.getAttribute("href").slice(1);
-      const targetContent = document.getElementById(targetId);
+    const target = $(this).attr('href');
+    $('.content:visible').fadeOut(1000, function () {
+      $(target).fadeIn(1000);
+    });
+  });
+}
 
-      contentSections.forEach((section) => {
-        if (section.style.display === 'block') {
-          section.style.transition = "opacity 1s ease-out";
-          section.style.opacity = 0;
-          setTimeout(() => {
-            section.style.display = 'none';
-          }, 1000);
-        }
-      });
 
       setTimeout(() => {
         targetContent.style.display = 'block';
