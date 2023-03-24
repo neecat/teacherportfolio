@@ -21,9 +21,7 @@ function hideOtherContentOnLoad() {
 function fadeInOnLoad() {
     const resumeContent = $('#resume-content');
     resumeContent.css('opacity', 0);
-    setTimeout(() => {
-        resumeContent.animate({ opacity: 1 }, 3000);
-    }, 100);
+    resumeContent.animate({ opacity: 1 }, 3000);
 }
 
 $(document).ready(function () {
