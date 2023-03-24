@@ -1,3 +1,10 @@
+function hideAllContent() {
+  const contentSections = document.querySelectorAll('.content');
+  contentSections.forEach((section) => {
+    section.style.display = 'none';
+  });
+}
+
 function fadeInOnLoad() {
   const resumeContent = document.getElementById("resume-content");
   resumeContent.style.opacity = 0;
@@ -26,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
       targetContent.classList.add("fade");
     });
   });
+});
 
+$(document).ready(function () {
+  hideAllContent();
   fadeInOnLoad();
 });
