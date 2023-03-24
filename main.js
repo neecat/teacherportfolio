@@ -1,3 +1,4 @@
+// This function hides all the content sections on page load
 function hideAllContent() {
   const contentSections = document.querySelectorAll('.content');
   contentSections.forEach((section) => {
@@ -5,6 +6,7 @@ function hideAllContent() {
   });
 }
 
+// This function fades in the resume content section on page load
 function fadeInOnLoad() {
   const resumeContent = document.getElementById("resume-content");
   resumeContent.style.opacity = 0;
@@ -15,6 +17,7 @@ function fadeInOnLoad() {
   }, 100);
 }
 
+// This function handles clicks on the navigation links
 function handleNavClicks() {
   const navLinks = document.querySelectorAll("#nav-bar li a");
   const contentSections = document.querySelectorAll(".content");
@@ -47,34 +50,9 @@ function handleNavClicks() {
   });
 }
 
+// This event listener runs when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   hideAllContent();
   fadeInOnLoad();
   handleNavClicks();
-});
-link.addEventListener("click", function (event) {
-  event.preventDefault();
-  const targetId = this.getAttribute("href").slice(1);
-  const targetContent = document.getElementById(targetId);
-
-  if (targetContent !== null) {
-    contentSections.forEach((section) => {
-      if (section.style.display === 'block') {
-        section.style.transition = "opacity 1s ease-out";
-        section.style.opacity = 0;
-        setTimeout(() => {
-          section.style.display = 'none';
-        }, 1000);
-      }
-    });
-
-    setTimeout(() => {
-      targetContent.style.display = 'block';
-      targetContent.style.opacity = 0;
-      setTimeout(() => {
-        targetContent.style.transition = "opacity 1s ease-in";
-        targetContent.style.opacity = 1;
-      }, 100);
-    }, 1000);
-  }
 });
