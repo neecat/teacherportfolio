@@ -16,11 +16,12 @@ function handleNavClicks() {
     event.preventDefault();
 
     const target = $(this).attr('href');
-    $('.content-section:visible').fadeOut(1000, function () {
+    $('.content:visible').fadeOut(1000, function () {
       $(target).fadeIn(1000);
     });
   });
 }
+
 
 
 $(document).ready(function () {
