@@ -26,10 +26,23 @@ function handleNavClicks() {
       const targetContent = document.getElementById(targetId);
 
       contentSections.forEach((section) => {
-        section.style.display = 'none';
+        if (section.style.display === 'block') {
+          section.style.transition = "opacity 1s ease-out";
+          section.style.opacity = 0;
+          setTimeout(() => {
+            section.style.display = 'none';
+          }, 1000);
+        }
       });
 
-      targetContent.style.display = 'block';
+      setTimeout(() => {
+        targetContent.style.display = 'block';
+        targetContent.style.opacity = 0;
+        setTimeout(() => {
+          targetContent.style.transition = "opacity 1s ease-in";
+          targetContent.style.opacity = 1;
+        }, 100);
+      }, 1000);
     });
   });
 }
