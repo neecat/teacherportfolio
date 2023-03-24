@@ -74,12 +74,13 @@ nav {
   background-repeat: no-repeat;
   background-size: 25%;
   padding: 50px;
+  padding-top: 100px;
 }
 #bio-video {
   position: absolute;
   top: 20px;
   left: 20px;
-  height: 25%;
-  width: 25%;
+  height: 200px;
+  width: 150px;
 }
 
