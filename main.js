@@ -12,19 +12,20 @@ function fadeInOnLoad() {
 }
 
 function handleNavClicks() {
-    const navLinks = document.querySelectorAll('#nav-bar a');
-    navLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetContent = document.querySelector(event.target.getAttribute('href'));
-            hideAllContent();
-            $(targetContent).fadeIn(1000);
-        });
+  $('#nav-bar a').on('click', function (event) {
+    event.preventDefault();
+
+    const target = $(this).attr('href');
+    $('.content-section:visible').fadeOut(1000, function () {
+      $(target).fadeIn(1000);
     });
+  });
 }
+
 
 $(document).ready(function () {
     hideAllContent();
     fadeInOnLoad();
     handleNavClicks();
 });
+init();
