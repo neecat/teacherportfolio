@@ -17,6 +17,8 @@ h2:hover {
 nav {
     background-color: #333;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 #nav-bar {
@@ -61,6 +63,7 @@ nav {
     margin: 0 auto;
     padding: 100px;
 }
+
 #bio-content {
   position: relative;
   top: 0;
@@ -76,11 +79,11 @@ nav {
   padding: 50px;
   padding-top: 100px;
 }
+
 #bio-video {
   position: absolute;
   top: 20px;
   left: 20px;
-  height: 200px;
-  width: 150px;
+  height: 100px;
+  width: 75px;
 }
-
