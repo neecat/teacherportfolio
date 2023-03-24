@@ -19,14 +19,14 @@ function hideOtherContentOnLoad() {
 }
 
 function fadeInOnLoad() {
-    const resumeContent = document.getElementById('resume-content');
-    resumeContent.style.opacity = '0';
+    const resumeContent = $('#resume-content');
+    resumeContent.css('opacity', 0);
     setTimeout(() => {
-        resumeContent.style.opacity = '1';
+        resumeContent.animate({ opacity: 1 }, 3000);
     }, 100);
 }
 
-window.onload = function () {
+$(document).ready(function () {
     hideOtherContentOnLoad();
     fadeInOnLoad();
-};
+});
