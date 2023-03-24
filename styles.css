@@ -62,9 +62,12 @@ nav {
 }
 /* Content Wrapper */
 .content {
-    transition: opacity 3s;
+    display: none;
 }
 
+#resume-content {
+    display: block;
+}
 .content.visible {
     display: block;
     opacity: 1;
