@@ -62,7 +62,18 @@ nav {
     padding: 100px;
 }
 #bio-content {
-  background: url('/mv/aboutme-topmv.mp4') no-repeat center top;
-  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: white;
+  background-image: url(/mv/aboutme-topmv.jpg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  padding: 50px;
 }
+
 
