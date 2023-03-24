@@ -61,3 +61,8 @@ nav {
     margin: 0 auto;
     padding: 100px;
 }
+#bio-content {
+  background: url('/mv/aboutme-topmv.mp4') no-repeat center top;
+  background-size: cover;
+}
+
