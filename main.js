@@ -8,3 +8,13 @@ function showContent(id) {
         }
     });
 }
+function fadeInOnLoad() {
+    const resumeContent = document.getElementById('resume-content');
+    resumeContent.style.display = 'block';
+    setTimeout(() => {
+        resumeContent.style.opacity = '1';
+    }, 100);
+}
+
+// Call the fadeInOnLoad function when the script runs
+fadeInOnLoad();
