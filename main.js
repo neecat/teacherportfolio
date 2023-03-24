@@ -1,20 +1,7 @@
-function showContent(id) {
-    const contentElements = document.querySelectorAll(".content");
-    contentElements.forEach((content) => {
-        if (content.id === id) {
-            content.classList.add("visible");
-        } else {
-            content.classList.remove("visible");
-        }
-    });
-}
-
-function hideOtherContentOnLoad() {
+function hideAllContent() {
     const contentSections = document.querySelectorAll('.content');
     contentSections.forEach((section) => {
-        if (section.id !== 'resume-content') {
-            section.style.display = 'none';
-        }
+        section.style.display = 'none';
     });
 }
 
@@ -24,7 +11,20 @@ function fadeInOnLoad() {
     resumeContent.animate({ opacity: 1 }, 3000);
 }
 
+function handleNavClicks() {
+    const navLinks = document.querySelectorAll('#nav-bar a');
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetContent = document.querySelector(event.target.getAttribute('href'));
+            hideAllContent();
+            $(targetContent).fadeIn(1000);
+        });
+    });
+}
+
 $(document).ready(function () {
-    hideOtherContentOnLoad();
+    hideAllContent();
     fadeInOnLoad();
+    handleNavClicks();
 });
