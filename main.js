@@ -6,13 +6,11 @@ function hideAllContent() {
 }
 
 function fadeInOnLoad() {
-  const resumeContent = document.getElementById("resume-content");
-  resumeContent.style.opacity = 0;
-  setTimeout(() => {
-    resumeContent.style.opacity = 1;
-    resumeContent.style.transition = "opacity 3s ease-in";
-  }, 100);
+  const resumeContent = $("#resume-content");
+  resumeContent.css("opacity", 0);
+  resumeContent.animate({ opacity: 1 }, 3000);
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("#nav-bar li a");
