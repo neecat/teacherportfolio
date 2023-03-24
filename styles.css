@@ -2,36 +2,7 @@ h2:hover {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-h2:hover {
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-/* Navigation Bar */
-nav {
-    background-color: #333;
-}
 
-#nav-bar {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-#nav-bar li {
-    float: left;
-}
-
-#nav-bar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-h2:hover {
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
 /* Navigation Bar */
 nav {
     background-color: #333;
@@ -60,6 +31,7 @@ nav {
 #nav-bar li a:hover {
     background-color: #111;
 }
+
 /* Content Wrapper */
 .content {
     display: none;
@@ -68,17 +40,14 @@ nav {
 #resume-content {
     display: block;
 }
+
 .content.visible {
     display: block;
     opacity: 1;
 }
+
 .content-wrapper {
     max-width: 1000px;
     margin: 0 auto;
     padding: 100px;
-}
-
-/* Change color on hover */
-#nav-bar li a:hover {
-    background-color: #111;
 }
