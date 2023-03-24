@@ -8,13 +8,14 @@ function hideAllContent() {
 function fadeInOnLoad() {
   const resumeContent = document.getElementById("resume-content");
   resumeContent.style.opacity = 0;
+  resumeContent.style.display = 'block';
   setTimeout(() => {
-    resumeContent.style.opacity = 1;
     resumeContent.style.transition = "opacity 3s ease-in";
+    resumeContent.style.opacity = 1;
   }, 100);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function handleNavClicks() {
   const navLinks = document.querySelectorAll("#nav-bar li a");
   const contentSections = document.querySelectorAll(".content");
 
@@ -25,17 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetContent = document.getElementById(targetId);
 
       contentSections.forEach((section) => {
-        section.classList.remove("visible");
-        section.classList.remove("fade");
+        section.style.display = 'none';
       });
 
-      targetContent.classList.add("visible");
-      targetContent.classList.add("fade");
+      targetContent.style.display = 'block';
     });
   });
-});
+}
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   hideAllContent();
   fadeInOnLoad();
+  handleNavClicks();
 });
