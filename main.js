@@ -1,26 +1,11 @@
-function hideAllContent() {
-    const contentSections = document.querySelectorAll('.content');
-    contentSections.forEach((section) => {
-        section.style.display = 'none';
-    });
-}
-
 function fadeInOnLoad() {
-    const resumeContent = $('#resume-content');
-    resumeContent.css('opacity', 0);
-    resumeContent.animate({ opacity: 1 }, 3000);
+  const resumeContent = document.getElementById("resume-content");
+  resumeContent.style.opacity = 0;
+  setTimeout(() => {
+    resumeContent.style.opacity = 1;
+  }, 100);
 }
 
-function handleNavClicks() {
-  $('#nav-bar a').on('click', function (event) {
-    event.preventDefault();
-
-    const target = $(this).attr('href');
-    $('.content:visible').fadeOut(1000, function () {
-      $(target).fadeIn(1000);
-    });
-  });
-}
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("#nav-bar li a");
   const contentSections = document.querySelectorAll(".content");
@@ -40,13 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
       targetContent.classList.add("fade");
     });
   });
+
+  fadeInOnLoad();
 });
-
-
-
-$(document).ready(function () {
-    hideAllContent();
-    fadeInOnLoad();
-    handleNavClicks();
-});
-init();
