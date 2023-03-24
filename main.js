@@ -3,6 +3,7 @@ function fadeInOnLoad() {
   resumeContent.style.opacity = 0;
   setTimeout(() => {
     resumeContent.style.opacity = 1;
+    resumeContent.style.transition = "opacity 3s ease-in";
   }, 100);
 }
 
