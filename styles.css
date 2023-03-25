@@ -14,11 +14,11 @@
 
 /* Sliding animations */
 .slide-in {
-  animation: slide-in 1s forwards;
+  animation: slide-in 3s forwards;
 }
 
 .slide-out {
-  animation: slide-out 1s forwards;
+  animation: slide-out 3s forwards;
 }
 
 @keyframes slide-in {
