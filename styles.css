@@ -116,7 +116,7 @@ nav {
 /* Banner section */
 .banner {
   position: relative;
-  height: 500px; /* adjust this to the desired height */
+  height: 400px; /* adjust this to the desired height */
   overflow: hidden;
   display: flex;
   justify-content: space-between;
