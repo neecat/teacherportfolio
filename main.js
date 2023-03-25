@@ -22,13 +22,16 @@ function updateImageContainers() {
   // Update the left image container
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
   leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
+  leftImageContainer.style.backgroundSize = "cover";
 
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+  rightImageContainer.style.backgroundSize = "cover";
 
   currentImageIndex = nextImageIndex;
 }
+
 setInterval(updateImageContainers, 5000);
 
 
