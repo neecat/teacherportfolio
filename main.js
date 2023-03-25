@@ -10,13 +10,10 @@ const imageUrls = [
   'img/instrument-demo1.jpeg',
   'img/berklee.JPG',
   'img/whiteboard.jpg',
-  
 ];
+
 const leftImageContainer = document.querySelector('.left-image-container');
 const rightImageContainer = document.querySelector('.right-image-container');
-
-//Image Slideshow
-let currentImageIndex = 0;
 
 function updateImageContainers() {
   const contentWrapper = document.querySelector('.content-wrapper');
@@ -43,9 +40,6 @@ function updateImageContainers() {
 
   currentImageIndex = nextImageIndex;
 }
-
-setInterval(updateImageContainers, 10000);
-
 
 // This function hides all the content sections on page load
 function hideAllContent() {
@@ -96,8 +90,8 @@ function handleNavClicks() {
         }, 100);
       }, 1000);
     });
-  });
-}
+ 
+
 
 // This event listener runs when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
