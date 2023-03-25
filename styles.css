@@ -96,6 +96,27 @@ nav {
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
+.left-image-container,
+.right-image-container {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.left-image-container {
+  left: 0;
+}
+
+.right-image-container {
+  right: 0;
+}
+
+
 @media screen and (max-width: 768px) {
   #bio-video {
     width: 100vw;
