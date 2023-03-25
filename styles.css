@@ -132,27 +132,25 @@ nav {
   transition: transform 1s ease-in-out;
 }
 
-.left-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+.left-image-container,
 .right-image-container {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 30%;
+  bottom: 0;
+  width: 50%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
+
+.left-image-container {
+  left: 0;
+}
+
+.right-image-container {
+  right: 0;
+}
+
 
 #bio-video {
   position: absolute;
