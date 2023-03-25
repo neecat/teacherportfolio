@@ -40,7 +40,7 @@ function updateImageContainers() {
   currentImageIndex = nextImageIndex;
 }
 
-setInterval(updateImageContainers, 5000);
+setInterval(updateImageContainers, 10000);
 
 
 // This function hides all the content sections on page load
