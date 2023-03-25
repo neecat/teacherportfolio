@@ -8,7 +8,7 @@ const imageUrls = [
   'img/instrumentdemo2.jpg',
   'img/instrument-demo.jpg',
   'img/instrument-demo1.jpeg',
-  'img/berklee.jpg',
+  'img/berklee.JPG',
   'img/whiteboard.jpg',
   
 ];
