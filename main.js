@@ -1,3 +1,37 @@
+const imageUrls = [
+  'img/aawm.jpg',
+  'img/performer.jpg',
+  'img/instrument-demo.jpg',
+  'img/production.jpg',
+  'img/instruments.jpeg',
+  'img/studiosession.jpeg',
+  'img/instrumentdemo2.jpg',
+  'img/instrument-demo.jpg',
+  'img/instrument-demo1.jpeg',
+  'img/berklee.jpg',
+  'img/whiteboard.jpg',
+  
+];
+//Image Slideshow
+let currentImageIndex = 0;
+
+function updateImageContainers() {
+  const leftImageContainer = document.querySelector('.left-image-container');
+  const rightImageContainer = document.querySelector('.right-image-container');
+
+  // Update the left image container
+  const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+  leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
+
+  // Update the right image container
+  const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
+  rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+
+  currentImageIndex = nextImageIndex;
+}
+setInterval(updateImageContainers, 5000);
+
+
 // This function hides all the content sections on page load
 function hideAllContent() {
   const contentSections = document.querySelectorAll('.content');
