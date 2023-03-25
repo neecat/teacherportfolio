@@ -114,5 +114,5 @@ document.addEventListener("DOMContentLoaded", function () {
   fadeInOnLoad();
   handleNavClicks();
 
-  updateImageContainers();
+  setInterval(updateImageContainers, 5000);
 });
