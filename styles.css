@@ -116,17 +116,16 @@ nav {
 /* Banner section */
 .banner {
   position: relative;
-  height: 30%; /* adjust this to the desired height */
-  max-width: 911px;
+  height: 50vh; /* adjust this to the desired height */
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .image-container {
   position: relative;
   height: 100%;
-  width: 30%;
+  width: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,7 +136,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 33%;
+  width: 30%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -148,7 +147,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 33%;
+  width: 30%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -157,14 +156,34 @@ nav {
 
 #bio-video {
   position: absolute;
-  top: auto;
-  left: auto;
-  right: auto;
+  top: 0;
+  left: 33%;
+  right: 33%;
+  bottom: 0;
+  margin: auto;
   height: 100%;
-  width: 100%;
+  width: 33.33%;
   object-fit: contain;
   z-index: 1;
 }
+
+@media screen and (max-width: 768px) {
+  #bio-video {
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
+  
+  .left-image-container {
+    width: 25%;
+  }
+  
+  .right-image-container {
+    width: 25%;
+  }
+}
+
 
 /* Sliding animation */
 .sliding .left-image-container {
