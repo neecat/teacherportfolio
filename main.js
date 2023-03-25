@@ -37,12 +37,13 @@ function updateImageContainers() {
   nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
   nextImageContainer.classList.add('slide-in');
   setTimeout(() => {
-    nextImageContainer.classList.remove('slide-in'); // add this line
+    nextImageContainer.classList.remove('slide-in');
     contentWrapper.classList.remove('sliding');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
 }
+
 
 
 
