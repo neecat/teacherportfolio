@@ -18,31 +18,31 @@ const rightImageContainer = document.querySelector('.right-image-container');
 let currentImageIndex = 0;
 
 function updateImageContainers() {
-  console.log("Update called");
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.classList.add('sliding');
 
   // Update the left image container
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-  const previousImageContainer = currentImageIndex === 0 ? rightImageContainer : leftImageContainer;
-  previousImageContainer.classList.add('slide-out');
-  setTimeout(() => {
-    previousImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
-    previousImageContainer.classList.remove('slide-out');
-  }, 1000);
+  leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
 
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
-  const nextImageContainer = currentImageIndex === imageUrls.length - 1 ? leftImageContainer : rightImageContainer;
-  nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-  nextImageContainer.classList.add('slide-in');
+  rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+
+  // Add slide-out class to the left image container and slide-in class to the right image container
+  leftImageContainer.classList.add('slide-out');
+  rightImageContainer.classList.add('slide-in');
+
+  // Remove slide-out class from the left image container and slide-in class from the right image container after 1s
   setTimeout(() => {
-    nextImageContainer.classList.remove('slide-in');
+    leftImageContainer.classList.remove('slide-out');
+    rightImageContainer.classList.remove('slide-in');
     contentWrapper.classList.remove('sliding');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
 }
+
 
 
 
