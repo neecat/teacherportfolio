@@ -70,43 +70,30 @@ nav {
   justify-content: center;
 }
 
+/* added */
+
+.center-image-container {
+  position: relative;
+}
+
 .left-image-container,
 .right-image-container {
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 33.33%;
+  width: 100%; /* Adjust this value to set the width of the left and right image containers */
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
 }
 
 .left-image-container {
-  left: 0;
-  background-image: url("img/nkleft.png");
+  left: -100%; /* Adjust this value to set the distance between the left and center image containers */
 }
 
 .right-image-container {
-  right: 0;
-  background-image: url("img/nkright.png");
+  right: -100%; /* Adjust this value to set the distance between the right and center image containers */
 }
 
-#center-image-container {
-  position: absolute;
-  top: 0;
-  left: 33.33%;
-  right: 33.33%;
-  bottom: 0;
-  margin: auto;
-  height: 100%;
-  width: 33.33%;
-  background-image: url("img/nkcenter.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
+
+/* end added */
 
 #bio-video {
   position: absolute;
