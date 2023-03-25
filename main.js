@@ -90,6 +90,9 @@ function handleNavClicks() {
         }, 100);
       }, 1000);
     });
+  });
+}
+
  
 
 
