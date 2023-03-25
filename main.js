@@ -16,25 +16,26 @@ const imageUrls = [
 let currentImageIndex = 0;
 
 function updateImageContainers() {
-  const leftImageContainer = document.querySelector('.left-image-container');
-  const rightImageContainer = document.querySelector('.right-image-container');
+  const contentWrapper = document.querySelector('.content-wrapper');
+  contentWrapper.classList.add('sliding');
 
   // Update the left image container
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
   const previousImageContainer = currentImageIndex === 0 ? rightImageContainer : leftImageContainer;
-  previousImageContainer.classList.add('sliding-out');
+  previousImageContainer.classList.add('slide-out');
   setTimeout(() => {
     previousImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
-    previousImageContainer.classList.remove('sliding-out');
+    previousImageContainer.classList.remove('slide-out');
   }, 1000);
 
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   const nextImageContainer = currentImageIndex === imageUrls.length - 1 ? leftImageContainer : rightImageContainer;
-  nextImageContainer.classList.add('sliding-in');
+  nextImageContainer.classList.add('slide-in');
   setTimeout(() => {
     nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-    nextImageContainer.classList.remove('sliding-in');
+    nextImageContainer.classList.remove('slide-in');
+    contentWrapper.classList.remove('sliding');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
