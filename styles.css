@@ -11,6 +11,20 @@
 .fade {
   animation: fadeEffect 3s;
 }
+/* Sliding animation */
+.sliding {
+  animation: slide 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 h2:hover {
   font-weight: bold;
