@@ -118,7 +118,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 33%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -130,7 +130,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 33%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -141,9 +141,9 @@ nav {
 #bio-video {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 80%;
+  left: 33%;
+  right: 33%;
+  height: 100%;
   width: 33.33%;
   object-fit: contain;
   z-index: 1;
