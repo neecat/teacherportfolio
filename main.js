@@ -15,6 +15,8 @@ const imageUrls = [
 const leftImageContainer = document.querySelector('.left-image-container');
 const rightImageContainer = document.querySelector('.right-image-container');
 
+let currentImageIndex = 0;
+
 function updateImageContainers() {
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.classList.add('sliding');
@@ -78,6 +80,9 @@ function handleNavClicks() {
           setTimeout(() => {
             section.style.display = 'none';
           }, 1000);
+        } else {
+          section.style.opacity = 0;
+          contentWrapper.classList.remove('sliding');
         }
       });
 
@@ -92,6 +97,7 @@ function handleNavClicks() {
     });
   });
 }
+
 
  
 
