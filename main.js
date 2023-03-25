@@ -25,10 +25,6 @@ function updateImageContainers() {
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
   leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
 
-  // Update the center image container
-  const centerImageContainer = document.getElementById('center-image-container');
-  centerImageContainer.style.backgroundImage = `url(${imageUrls[currentImageIndex]})`;
-
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
@@ -46,11 +42,6 @@ function updateImageContainers() {
 
   currentImageIndex = nextImageIndex;
 }
-
-
-
-
-
 
 // This function hides all the content sections on page load
 function hideAllContent() {
@@ -110,11 +101,6 @@ function handleNavClicks() {
     });
   });
 }
-
-
-
- 
-
 
 // This event listener runs when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
