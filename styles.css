@@ -95,7 +95,7 @@ nav {
 }
 
 .right-image-container {
-  right: -33.33%;
+  right: 0%;
 }
 
 /* Media query */
@@ -105,8 +105,7 @@ nav {
     width: 25%;
   }
 
-  .center-image-container,
-  #bio-video {
+  .center-image-container {
     width: 100vw;
     height: auto;
     left: 0;
@@ -116,19 +115,6 @@ nav {
 
 
 /* end added */
-
-#bio-video {
-  position: absolute;
-  top: 0;
-  left: 33.33%;
-  right: 33.33%;
-  bottom: 0;
-  margin: auto;
-  height: 100%;
-  width: 33.33%;
-  object-fit: contain;
-  z-index: 2;
-}
 /* Resume Section */
 
 #resume-content {
