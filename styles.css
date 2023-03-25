@@ -116,7 +116,7 @@ nav {
 /* Banner section */
 .banner {
   position: relative;
-  height: 400px; /* adjust this to the desired height */
+  height: 30%; /* adjust this to the desired height */
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -156,11 +156,11 @@ nav {
 
 #bio-video {
   position: absolute;
-  top: 0;
-  left: 23%;
-  right: 23%;
+  top: auto;
+  left: auto;
+  right: auto;
   height: 100%;
-  width: 50%;
+  width: 100%;
   object-fit: contain;
   z-index: 1;
 }
