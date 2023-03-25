@@ -34,21 +34,16 @@ function updateImageContainers() {
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   const nextImageContainer = currentImageIndex === imageUrls.length - 1 ? leftImageContainer : rightImageContainer;
-
-  // Check if the flag is set to true before animating the next image container
-  if (!nextImageContainer.classList.contains('sliding')) {
-    nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-    nextImageContainer.classList.add('sliding');
-    nextImageContainer.classList.add('slide-in');
-    setTimeout(() => {
-      nextImageContainer.classList.remove('slide-in');
-      nextImageContainer.classList.remove('sliding');
-      contentWrapper.classList.remove('sliding');
-    }, 1000);
-  }
+  nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+  nextImageContainer.classList.add('slide-in');
+  setTimeout(() => {
+    nextImageContainer.classList.remove('slide-in'); // add this line
+    contentWrapper.classList.remove('sliding');
+  }, 1000);
 
   currentImageIndex = nextImageIndex;
 }
+
 
 
 
