@@ -11,11 +11,7 @@
 .fade {
   animation: fadeEffect 3s;
 }
-/* Sliding animation */
-.sliding {
-  animation: slide 1s !important;
-  animation-fill-mode: forwards;
-}
+
 /* Sliding animations */
 .slide-in {
   animation: slide-in 1s forwards;
@@ -43,14 +39,7 @@
   }
 }
 
-@keyframes slide {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
+
 
 h2:hover {
   font-weight: bold;
@@ -88,6 +77,8 @@ nav {
   background-color: #111;
 }
 
+
+
 /* Content Wrapper */
 .content {
   display: none;
@@ -122,6 +113,7 @@ nav {
   height: calc(100vh - 56px);
 }
 
+/* Banner section */
 .banner {
   position: relative;
   height: 500px; /* adjust this to the desired height */
@@ -149,7 +141,6 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform 1s ease-in-out;
 }
 
 .right-image-container {
@@ -161,7 +152,6 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform 1s ease-in-out;
 }
 
 #bio-video {
@@ -175,7 +165,14 @@ nav {
   z-index: 1;
 }
 
+/* Sliding animation */
+.sliding .left-image-container {
+  animation: slide-out 1s forwards;
+}
 
+.sliding .right-image-container {
+  animation: slide-in 1s forwards;
+}
 
 @media screen and (max-width: 768px) {
   #bio-video {
