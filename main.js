@@ -34,15 +34,15 @@ function updateImageContainers() {
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   const nextImageContainer = currentImageIndex === imageUrls.length - 1 ? leftImageContainer : rightImageContainer;
+  nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
   nextImageContainer.classList.add('slide-in');
   setTimeout(() => {
-    nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-    nextImageContainer.classList.remove('slide-in');
     contentWrapper.classList.remove('sliding');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
 }
+
 
 // This function hides all the content sections on page load
 function hideAllContent() {
