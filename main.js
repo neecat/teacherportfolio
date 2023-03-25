@@ -18,6 +18,7 @@ const rightImageContainer = document.querySelector('.right-image-container');
 let currentImageIndex = 0;
 
 function updateImageContainers() {
+  console.log("Update called");
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.classList.add('sliding');
 
@@ -84,6 +85,7 @@ function handleNavClicks() {
         } else {
           section.style.opacity = 0;
           contentWrapper.classList.remove('sliding');
+          updateImageContainers();
         }
       });
 
@@ -95,6 +97,8 @@ function handleNavClicks() {
           targetContent.style.opacity = 1;
         }, 100);
       }, 1000);
+
+      updateImageContainers();
     });
   });
 }
@@ -109,4 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   hideAllContent();
   fadeInOnLoad();
   handleNavClicks();
+
+  updateImageContainers();
 });
