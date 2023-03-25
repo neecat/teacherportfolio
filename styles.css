@@ -117,6 +117,7 @@ nav {
 .banner {
   position: relative;
   height: 30%; /* adjust this to the desired height */
+  max-width: 911px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
