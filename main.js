@@ -12,6 +12,9 @@ const imageUrls = [
   'img/whiteboard.jpg',
   
 ];
+const leftImageContainer = document.querySelector('.left-image-container');
+const rightImageContainer = document.querySelector('.right-image-container');
+
 //Image Slideshow
 let currentImageIndex = 0;
 
