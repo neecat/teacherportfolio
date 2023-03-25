@@ -70,26 +70,48 @@ nav {
   justify-content: center;
 }
 
-/* added */
-
 .center-image-container {
   position: relative;
+  height: 100%;
+  width: 33.33%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .left-image-container,
 .right-image-container {
   position: absolute;
   top: 0;
-  width: 100%; /* Adjust this value to set the width of the left and right image containers */
+  width: 33.33%;
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .left-image-container {
-  left: -100%; /* Adjust this value to set the distance between the left and center image containers */
+  left: -33.33%;
 }
 
 .right-image-container {
-  right: -100%; /* Adjust this value to set the distance between the right and center image containers */
+  right: -33.33%;
+}
+
+/* Media query */
+@media screen and (max-width: 768px) {
+  .left-image-container,
+  .right-image-container {
+    width: 25%;
+  }
+
+  .center-image-container,
+  #bio-video {
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
 }
 
 
@@ -106,21 +128,6 @@ nav {
   width: 33.33%;
   object-fit: contain;
   z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-  .left-image-container,
-  .right-image-container {
-    width: 25%;
-  }
-
-  #center-image-container,
-  #bio-video {
-    width: 100vw;
-    height: auto;
-    left: 0;
-    top: 0;
-  }
 }
 /* Resume Section */
 
