@@ -21,18 +21,20 @@ function updateImageContainers() {
 
   // Update the left image container
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-  leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
-  leftImageContainer.classList.add('sliding');
+  const previousImageContainer = currentImageIndex === 0 ? rightImageContainer : leftImageContainer;
+  previousImageContainer.classList.add('sliding-out');
   setTimeout(() => {
-    leftImageContainer.classList.remove('sliding');
+    previousImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
+    previousImageContainer.classList.remove('sliding-out');
   }, 1000);
 
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
-  rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-  rightImageContainer.classList.add('sliding');
+  const nextImageContainer = currentImageIndex === imageUrls.length - 1 ? leftImageContainer : rightImageContainer;
+  nextImageContainer.classList.add('sliding-in');
   setTimeout(() => {
-    rightImageContainer.classList.remove('sliding');
+    nextImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+    nextImageContainer.classList.remove('sliding-in');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
