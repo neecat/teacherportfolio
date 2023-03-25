@@ -157,10 +157,10 @@ nav {
 #bio-video {
   position: absolute;
   top: 0;
-  left: 33%;
-  right: 33%;
+  left: 23%;
+  right: 23%;
   height: 100%;
-  width: 33.33%;
+  width: 50%;
   object-fit: contain;
   z-index: 1;
 }
