@@ -25,6 +25,10 @@ function updateImageContainers() {
   const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
   leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
 
+  // Update the center image container
+  const centerImageContainer = document.getElementById('center-image-container');
+  centerImageContainer.style.backgroundImage = `url(${imageUrls[currentImageIndex]})`;
+
   // Update the right image container
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
   rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
