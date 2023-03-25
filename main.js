@@ -66,6 +66,7 @@ function fadeInOnLoad() {
 function handleNavClicks() {
   const navLinks = document.querySelectorAll("#nav-bar li a");
   const contentSections = document.querySelectorAll(".content");
+  const contentWrapper = document.querySelector('.content-wrapper');
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -97,6 +98,7 @@ function handleNavClicks() {
     });
   });
 }
+
 
 
  
