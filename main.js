@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  const banner = $(".banner");
-  const imagePath = banner.attr("data-image-path");
+  const bannerBgs = $(".banner .banner-bg");
+  const imagePath = $(".banner").attr("data-image-path");
   const images = [
     "image1.jpg",
     "image2.jpg",
@@ -8,12 +8,15 @@ $(document).ready(function () {
   ];
 
   let imageIndex = 0;
+  let activeBgIndex = 0;
 
   function setBackgroundImage() {
     const imageURL = imagePath + images[imageIndex];
-    banner.css("background-image", `url(${imageURL})`);
-    const position = imagePositions[images[imageIndex]];
-    banner.css("background-position", position);
+    const inactiveBgIndex = (activeBgIndex + 1) % 2;
+    bannerBgs.eq(inactiveBgIndex).css("background-image", `url(${imageURL})`);
+    bannerBgs.eq(activeBgIndex).css("opacity", 0);
+    bannerBgs.eq(inactiveBgIndex).css("opacity", 1);
+    activeBgIndex = inactiveBgIndex;
   }
 
   setBackgroundImage();
@@ -22,6 +25,8 @@ $(document).ready(function () {
     setBackgroundImage();
   }, 5000);
 });
+
+// Rest of your code (unchanged)
 
 
 let currentImageIndex = 0;
@@ -74,7 +79,6 @@ function handleNavClicks() {
         } else {
           section.style.opacity = 0;
           contentWrapper.classList.remove('sliding');
-          updateImageContainers();
         }
       });
 
@@ -87,7 +91,6 @@ function handleNavClicks() {
         }, 100);
       }, 1000);
 
-      updateImageContainers();
     });
   });
 }
@@ -97,6 +100,4 @@ document.addEventListener("DOMContentLoaded", function () {
   hideAllContent();
   fadeInOnLoad();
   handleNavClicks();
-
-  setInterval(updateImageContainers, 5000);
 });
