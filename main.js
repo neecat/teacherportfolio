@@ -5,7 +5,7 @@ $(document).ready(function () {
     "aawm.jpg",
     "berklee.JPG",
     "instrument-demo.jpg",
-    "instrument-demo1.jepg",
+    "instrument-demo1.jpeg",
     "performer.jpg",
     "production.jpg",
     "studiosession.jpeg",
