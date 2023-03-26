@@ -101,6 +101,11 @@
 .bio-content .stylized-text .text-div {
   /* text div styles */
 }
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* NAV BAR */
 #nav-bar li {
