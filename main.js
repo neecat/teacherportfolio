@@ -1,44 +1,37 @@
-const imageUrls = [
-  'img/aawm.jpg',
-  'img/performer.jpg',
-  'img/instrument-demo.jpg',
-  'img/production.jpg',
-  'img/instruments.jpeg',
-  'img/studiosession.jpeg',
-  'img/instrumentdemo2.jpg',
-  'img/instrument-demo.jpg',
-  'img/instrument-demo1.jpeg',
-  'img/berklee.JPG',
-  'img/whiteboard.jpg',
-];
+$(document).ready(function () {
+  const banner = $(".banner");
+  const imagePath = banner.attr("data-image-path");
+  const images = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg",
+  ];
 
-const leftImageContainer = document.querySelector('.left-image-container');
-const rightImageContainer = document.querySelector('.right-image-container');
+  let imageIndex = 0;
+
+  function setBackgroundImage() {
+    const imageURL = imagePath + images[imageIndex];
+    banner.css("background-image", `url(${imageURL})`);
+    const position = imagePositions[images[imageIndex]];
+    banner.css("background-position", position);
+  }
+
+  setBackgroundImage();
+  setInterval(() => {
+    imageIndex = (imageIndex + 1) % images.length;
+    setBackgroundImage();
+  }, 5000);
+});
+
 
 let currentImageIndex = 0;
 
-function updateImageContainers() {
-  const contentWrapper = document.querySelector('.content-wrapper');
-  contentWrapper.classList.add('sliding');
-
-  // Update the banner background image
-  const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
-  const banner = document.querySelector('.banner');
-  banner.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
-
-  // Add fade-in class to the banner
-  banner.classList.add('fade-in');
-
-  // Remove fade-in class from the banner after 1s
-  setTimeout(() => {
-    banner.classList.remove('fade-in');
-    contentWrapper.classList.remove('sliding');
-  }, 1000);
-
-  currentImageIndex = nextImageIndex;
+function updateImage() {
+  const imageClass = `image-${currentImageIndex + 1}`; // Add 1 to make it 1-based index
+  $(".banner").css("background-image", `url(${images[currentImageIndex]})`);
+  $(".banner").attr("class", `banner ${imageClass}`);
+  currentImageIndex = (currentImageIndex + 1) % images.length;
 }
-
-
 
 // This function hides all the content sections on page load
 function hideAllContent() {
