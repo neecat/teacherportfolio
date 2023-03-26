@@ -2,9 +2,17 @@ $(document).ready(function () {
   const bannerBgs = $(".banner .banner-bg");
   const imagePath = $(".banner").attr("data-image-path");
   const images = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
+    "aawm.jpg",
+    "berklee.JPG",
+    "instrument-demo.jpg",
+    "instrument-demo1.jpg",
+    "performer.jpg",
+    "production.jpg",
+    "studiosession.jpeg",
+    "instrumentdemo2.jpg",
+    "instruments.jpg",
+    "whiteboard.jpg",
+
   ];
 
   let imageIndex = 0;
