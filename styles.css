@@ -38,6 +38,23 @@
   background-position: center;
 }
 
+
+/* Custom background positions */
+.image-1 {
+  background-position: center;
+}
+
+.image-2 {
+  background-position: center;
+}
+
+.image-3 {
+  background-position: center;
+}
+
+/* Add more classes for each image, and adjust the background-position accordingly */
+
+
 /* NAV BAR */
 #nav-bar li {
   list-style: none;
