@@ -78,6 +78,29 @@
 
 /* Add more classes for each image, and adjust the background-position accordingly */
 
+.bio-content {
+  /* bio-content styles */
+}
+
+.bio-content h1 {
+  /* title header styles */
+}
+
+.bio-content .paragraph {
+  /* paragraph styles */
+}
+
+.bio-content .stylized-text {
+  /* stylized text div styles */
+}
+
+.bio-content .stylized-text h2 {
+  /* subtitle header styles */
+}
+
+.bio-content .stylized-text .text-div {
+  /* text div styles */
+}
 
 /* NAV BAR */
 #nav-bar li {
