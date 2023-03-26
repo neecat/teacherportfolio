@@ -12,6 +12,32 @@
   animation: fadeEffect 2s;
 }
 
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+/* Banner section */
+.banner {
+  position: relative;
+  height: 50vh; /* adjust this to the desired height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* NAV BAR */
 #nav-bar li {
   list-style: none;
@@ -59,61 +85,6 @@ nav {
   text-decoration: none;
   font-size: 1.2rem;
 }
-
-
-/* Banner section */
-.banner {
-  position: relative;
-  height: 50vh; /* adjust this to the desired height */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.center-image-container {
-  position: relative;
-  height: 100%;
-  width: 33.33%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.left-image-container,
-.right-image-container {
-  position: absolute;
-  top: 0;
-  width: 33.33%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.left-image-container {
-  left: -33.33%;
-}
-
-.right-image-container {
-  right: 0%;
-}
-
-/* Media query */
-@media screen and (max-width: 768px) {
-  .left-image-container,
-  .right-image-container {
-    width: 25%;
-  }
-
-  .center-image-container {
-    width: 100vw;
-    height: auto;
-    left: 0;
-    top: 0;
-  }
-}
-
-
 /* end added */
 /* Resume Section */
 
