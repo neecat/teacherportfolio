@@ -5,12 +5,12 @@ $(document).ready(function () {
     "aawm.jpg",
     "berklee.JPG",
     "instrument-demo.jpg",
-    "instrument-demo1.jpg",
+    "instrument-demo1.jepg",
     "performer.jpg",
     "production.jpg",
     "studiosession.jpeg",
     "instrumentdemo2.jpg",
-    "instruments.jpg",
+    "instruments.jpeg",
     "whiteboard.jpg",
 
   ];
