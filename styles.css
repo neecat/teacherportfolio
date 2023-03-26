@@ -52,6 +52,15 @@
 .banner-bg:nth-child(2) {
   opacity: 0;
 }
+.banner-text {
+  position: absolute;
+  bottom: 15px; /* Adjust this value to change the distance from the bottom */
+  left: 15px; /* Adjust this value to change the distance from the left */
+  color: white;
+  font-size: 24px; /* Adjust this value to change the font size */
+  font-weight: bold; /* Adjust this value to change the font weight */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: add a subtle text shadow to improve readability */
+}
 
 
 /* Custom background positions */
