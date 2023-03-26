@@ -21,31 +21,23 @@ function updateImageContainers() {
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.classList.add('sliding');
 
-  // Update the left image container
-  const previousImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-  leftImageContainer.style.backgroundImage = `url(${imageUrls[previousImageIndex]})`;
-
-  // Update the center image container
-  const centerImageContainer = document.getElementById('center-image-container');
-  centerImageContainer.style.backgroundImage = "url('img/nkcenter.png')"; // Set the background image for the center image container
-
-  // Update the right image container
+  // Update the banner background image
   const nextImageIndex = (currentImageIndex + 1) % imageUrls.length;
-  rightImageContainer.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
+  const banner = document.querySelector('.banner');
+  banner.style.backgroundImage = `url(${imageUrls[nextImageIndex]})`;
 
-  // Add slide-out class to the left image container and slide-in class to the right image container
-  leftImageContainer.classList.add('slide-out');
-  rightImageContainer.classList.add('slide-in');
+  // Add fade-in class to the banner
+  banner.classList.add('fade-in');
 
-  // Remove slide-out class from the left image container and slide-in class from the right image container after 1s
+  // Remove fade-in class from the banner after 1s
   setTimeout(() => {
-    leftImageContainer.classList.remove('slide-out');
-    rightImageContainer.classList.remove('slide-in');
+    banner.classList.remove('fade-in');
     contentWrapper.classList.remove('sliding');
   }, 1000);
 
   currentImageIndex = nextImageIndex;
 }
+
 
 
 // This function hides all the content sections on page load
